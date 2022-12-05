@@ -379,7 +379,6 @@ button {
 
     margin-bottom: 50px;
 
-    font-size: 36px;
     line-height: 1.17;
     text-align: center;
     color: var(--title-text-color);
@@ -419,6 +418,8 @@ button {
     bottom: 0;
 
   }
+
+
 
   /* our team */
 
@@ -539,11 +540,19 @@ button {
   align-items: center;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
 .clients-icon {
   fill: var(--icon-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon-link:hover .clients-icon,
@@ -640,6 +649,10 @@ button {
     margin-bottom: 20px;
     font-weight: 700
   }
+
+  .footers-network-list{
+    padding-bottom: 0px;
+  }
   /* Portfoio */
   
 
@@ -721,7 +734,8 @@ button {
 
   }
 
-  .portfolio-list-item {
+  .portfolio-link {
+    display: block;
     background-color:var(--bg-color);
     box-shadow: none;
 
@@ -731,8 +745,8 @@ button {
 
   }
 
-  .portfolio-list-item:hover,
-  .portfolio-list-item:focus {
+  .portfolio-link:hover,
+  .portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 
@@ -757,7 +771,8 @@ button {
 
   }
 
-  .portfolio-list-item:hover .overlay-text {
+  .portfolio-link:hover .overlay-text,
+  .portfolio-link:focus .overlay-text {
     transform: translate(0);
 
   }
